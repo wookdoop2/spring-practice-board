@@ -3,6 +3,7 @@ package com.sungwook.study.springpracticeboard.web;
 import com.sungwook.study.springpracticeboard.service.posts.PostsService;
 import com.sungwook.study.springpracticeboard.web.dto.PostsResponseDto;
 import com.sungwook.study.springpracticeboard.web.dto.PostsSaveRequestDto;
+import com.sungwook.study.springpracticeboard.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class PostsApiController {
     }
 
     @PutMapping("/api/v1/posts/{id}")
-    public void update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
+    public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
         return postsService.update(id, requestDto);
     }
 

@@ -2,12 +2,16 @@ package com.sungwook.study.springpracticeboard.service.posts;
 
 import com.sungwook.study.springpracticeboard.domain.posts.Posts;
 import com.sungwook.study.springpracticeboard.domain.posts.PostsRepository;
+import com.sungwook.study.springpracticeboard.web.dto.PostsListResponseDto;
 import com.sungwook.study.springpracticeboard.web.dto.PostsResponseDto;
 import com.sungwook.study.springpracticeboard.web.dto.PostsSaveRequestDto;
 import com.sungwook.study.springpracticeboard.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -35,6 +39,13 @@ public class PostsService {
                 " id=" + id));
 
         return new PostsResponseDto(posts);
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(posts -> new PostsListResponseDto(posts))
+                .collect(Collectors.toList());
     }
 
 }

@@ -46,4 +46,4 @@ Front-end
 
 - Junit 4 -> 5 버전 변경
   
-[(2020.12.16)스프링 부트와 AWS로 혼자 구현하는 웹 서비스 최신 코드로 변경하기](https://www.youtube.com/watch?v=AhCib1thS7M&list=PL9mhQYIlKEhfg0aLdaO04wYUovLMXY4DU&index=1) 참조
+[(2020.12.16)스프링 부트와 AWS로 혼자 구현하는 웹 서비스 최신 코드로 변경하기](https://jojoldu.tistory.com/539?category=717427) 참조

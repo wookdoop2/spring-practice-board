@@ -1,4 +1,4 @@
-package com.sungwook.study.springpracticeboard.domain.posts;
+package com.sungwook.study.springpracticeboard.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

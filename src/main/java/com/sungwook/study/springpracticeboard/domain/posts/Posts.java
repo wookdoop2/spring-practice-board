@@ -1,5 +1,6 @@
 package com.sungwook.study.springpracticeboard.domain.posts;
 
+import com.sungwook.study.springpracticeboard.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
